@@ -2,7 +2,6 @@
   import Brand from "../ui-items/Brand.svelte";
   import Menu from "../ui-items/Menu.svelte";
     import { windowSize } from "../stores";
-  import { onMount } from "svelte";
 
 import { scrolled } from "../stores";
 
@@ -49,7 +48,7 @@ import { scrolled } from "../stores";
     }
   }
 
-  @media (min-width: 1440px){
+  @media (min-width: 2240px){
     .over1{
 border-bottom-left-radius: 15px;
 border-bottom-right-radius: 15px;

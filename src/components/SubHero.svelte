@@ -10,7 +10,6 @@
 </script>
 
 <div class="columns row">
-
   <div class="col1">
     <p>{@html left_column}</p>
   </div>
@@ -22,8 +21,8 @@
 <style>
   .columns {
     gap: 40px;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 0 15px;
+    margin-bottom: 20px;
   }
 
   .col1 {

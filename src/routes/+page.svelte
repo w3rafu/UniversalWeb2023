@@ -16,16 +16,16 @@
   seats_count={10}
 />
 <SubHero
-  left_column={`<h3 style="margin-bottom: 15px;" class="no-margin">
+  left_column={`<h2 style="margin-bottom: 15px;" class="no-margin">
   We understand that starting and maintaining a small
-    organization is challenging.</h3><p class="p">Our mission is to reduce risks and
+    organization is challenging.</h2><p class="p">Our mission is to reduce risks and
     unnecessary spending as your organization grows. 
     We take over the technological and marketing management burden, so you
     can invest in your value and get the visibility your effort deserves.</p>`}
-  right_column={`<h3 style="margin-bottom: 15px;" class="no-margin">The best part?<br /> You can cancel anytime.</h3>
+  right_column={`<h2 style="margin-bottom: 15px;" class="no-margin">The best part?<br /> You can cancel anytime.</h2>
    <p class="p">Contact us today to learn more about our
     affordable website leasing options and take the first step towards
-    establishing a strong online presence. We can create a reciprocal business relationship,
+    establishing a strong online presence. Lets design a reciprocal business relationship,
     that leverages expertise with no ties.</p> `}
 />
 

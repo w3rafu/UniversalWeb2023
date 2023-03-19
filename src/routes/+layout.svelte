@@ -1,20 +1,24 @@
 <script>
+  //UI components
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
-    import { scrolled } from "../stores";
+  //Window State
+  import { scrolled } from "../stores";
   import { windowSize } from "../stores";
+  //Utilities
   import { onMount } from "svelte";
 
+  /**
+   * Listens to windows size and scolling vertically
+  */
   /**
    * @type {number}
    */
   let innerWidth;
-
   /**
    * @type {number}
    */
   let scrollY;
-
   onMount(() => {
     innerWidth = window.innerWidth;
     scrollY = window.scrollY;
@@ -23,9 +27,9 @@
   $: scrolled.set(scrollY)
 
 </script>
-
 <svelte:window bind:innerWidth bind:scrollY/>
 
+<!--Font and Icon Support-->
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -39,9 +43,10 @@
   />
 </svelte:head>
 
+<!--The Content -->
 <Header />
-<slot />
-
+  <slot />
+<Footer />
 
 <style>
   :global(:root) {

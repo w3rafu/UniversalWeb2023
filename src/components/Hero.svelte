@@ -80,13 +80,9 @@
         display: flex;
         flex-direction: row;
     }
-  .first {
-    background-color: var(--darkover);
-  
-    color: white;
-  }
+
   #hero {
-    padding: 40px 15px;
+    padding: 30px 15px 30px;
 
   }
 
@@ -112,6 +108,7 @@
     font-weight: 500;
     letter-spacing: 0.03em;
     margin-right: 10px;
+    backdrop-filter: blur(10px);
   }
   .counter-led {
     width: 20px;
@@ -133,13 +130,14 @@
   }
 
   .pink {
-    width: 270px;
+    width: 280px;
     border-radius: 20px;
     object-fit: cover;
-    height: 270px;
+    height: 280px;
     object-position: 10%;
     margin-right: 30px;
-    margin-top: 10px;
+    margin-top: 0;
+    box-shadow: var(--bottomshadow);
   }
 
   button {
