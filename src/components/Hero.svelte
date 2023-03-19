@@ -82,7 +82,7 @@
     }
 
   #hero {
-    padding: 30px 15px 30px;
+    padding: 60px 15px 80px;
 
   }
 
@@ -96,13 +96,15 @@
 
   .ctas button {
     margin-right: 15px;
+    box-shadow: var(--bottomshadow);
   }
   .seats-counter {
     color: white;
-    box-shadow: 0 0 20px var(--green);
+    border: 3px solid var(--link);
+    box-shadow: var(--bottomshadow);
     background-color: var(--darkover);
     width: max-content;
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
     font-family: "Red Hat Display";
     font-weight: 500;

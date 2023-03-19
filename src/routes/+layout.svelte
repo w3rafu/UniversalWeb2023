@@ -52,7 +52,8 @@
   :global(:root) {
     --darkover: #0d0c18c1;
     --blue: #060b38;
-    --link: #1b6dde;
+    --lightBlue: #1b6dde;
+    --link: #bcede9;
     --green: #14d752;
     --purplegradient: linear-gradient(
       45deg,

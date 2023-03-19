@@ -1,157 +1,86 @@
+<script>
+  import FooterWidget from "../ui-items/FooterWidget.svelte";
+  import FooterNotice from "../ui-items/FooterNotice.svelte";
+</script>
+
 <footer class="row">
-  <div class="col1">
-        <h2>Beyond Money & Compliance</h2>
-
-    <p>
-      Universal Web
-      recognize and value the unique strengths and perspectives that individuals
-      with disabilities and diverse backgrounds have to offer.
-    </p>
-    <p>
-      We are passionate about empowering others into achieving their goals an making
-      techonolgy accessible for everyone. Our
-      commitment with people is universal.
-    </p>
+  <div class="area1">
+    <FooterNotice />
   </div>
-  <div class="col2">
-    <h2>Services</h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Lease a Website</a>
-        </li>
-        <li>
-          <a href="/">Search Engine Optimization</a>
-        </li>
-        <li>
-          <a href="/">Accessibility Compliance</a>
-        </li>
-        <li>
-          <a href="/">Cybersecurity Audit</a>
-        </li>
-
-      </ul>
-    </nav>
+  <div class="area2">
+    <FooterWidget
+      icon={"hub"}
+      title={"Learn"}
+      links={[
+        ["/", "About us"],
+        ["/", "Articles"],
+        ["/", "Knowledge Base"],
+        ["/", "Contact Us"],
+      ]}
+    />
   </div>
-  <div class="col3">
-    <h2>Learn More</h2>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">
-                    About us
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    Articles
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    Knowlege Base
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    Contact Us
-                </a>
-            </li>
-        </ul>
-    </nav>
+  <div class="area3">
+    <FooterWidget
+      icon={"approval_delegation"}
+      title={"Values"}
+      links={[
+        ["/", "Ethical Statement"],
+        ["/", "Join our Team"],
+        ["/", "Privacy Policy"],
+        ["/", "Terms and Conditions"],
+      ]}
+    />
+  </div>
+  <div class="area4">
+    <FooterWidget
+      icon={"trending_up"}
+      title={"Services"}
+      links={[
+        ["/", "Lease a Website"],
+        ["/", "Search Engine Optimization"],
+        ["/", "Accessibility Compliance"],
+        ["/", "Cybersecurity Audit"],
+      ]}
+    />
+  </div>
+  
+  <div class="area5">
 
-  </div><div class="col4">
-    <h2>Values</h2>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">
-                    Ethical Statement
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    Join our Team
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    Privacy Policy
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                   Terms and Conditions
-                </a>
-            </li>
-        </ul>
-    </nav>
-
+    <div>
+        <p>
+            &copy; 2023 Universal Web <span>🇺🇸</span>Carbondale, IL. 
+          </p>
+    </div>
+   
   </div>
 </footer>
-<!--
-<aside class="row spread align-center">
-    <div class="row align-center">
-        &copy; 2023 Universal Web,  Carbondale IL. <span style="font-size: var(--font-size-lg);margin: 5px 0 0 5px;">🇺🇸</span>
-    </div>
-    <div>
-        <nav class="row">
-            <a href="/">Terms & Conditions</a>
-            <a href="/">Privacy Policy</a>
-            <a href="/">Ethical Statement</a>
-            <a href="/">Join our Team</a>
-        </nav>
-    </div>
 
-</aside>
--->
 <style>
-    aside {
-        padding: 30px 15px;
-        font-weight: 600;
-        font-size: var(--font-size-md );
-    }
   footer {
+    display: grid;
+    grid-template-columns: 0.9fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 'area1 area2 area3 area4'
+    'area5 area5 area5 area5';
     background-color: var(--darkover);
-    padding: 30px 40px 50px;
-    gap: 0;
+    padding: 30px 40px 30px;
+    gap: 30px;
     border-radius: 20px;
-    margin-top: 40px;    
-  }
-  .col1 {
-    width: 40%;
+    margin-top: 40px;
+    box-shadow: var(--bottomshadow);
   }
 
-  p {
-    font-size: var(--font-size-base);
-  }
-
-  .col2, .col3, .col4{
-    width: 20%;
-  }
-
-  nav {
+  .area1{grid-area:area1;}
+  .area2{grid-area:area2;}
+  .area3{grid-area:area3;}
+  .area4{grid-area:area4;}
+  .area5{grid-area:area5; height: auto; margin-top: -40px; display: flex; justify-content: center;}
+span {
+    font-size: var(--font-size-lg);
+    margin: 0 10px
+}
+p {
     display: flex;
-
-  }
-
-  ul {
-    padding-left: 15px;
-  }
-
-  li {
-    margin-bottom: 15px;
-  }
-
-  h2 {
-    margin-bottom: 0;
-  }
-  nav li a, nav a {
-    color: white;
-    font-size: var(--font-size-base);
-    opacity: .8;
-  }
-  aside a {
-    padding-left: 15px;
-  }
+    align-items: center;
+}
 </style>

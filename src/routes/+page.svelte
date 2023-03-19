@@ -16,25 +16,26 @@
   seats_count={10}
 />
 <SubHero
-  left_column={`<h2 style="margin-bottom: 15px;" class="no-margin">
-  We understand that starting and maintaining a small
-    organization is challenging.</h2><p class="p">Our mission is to reduce risks and
+  bg_img={"ssh.webp"}
+  title_left={"We know the challenges of starting and maintaining an organization"}
+  title_right={"The best part?<br /> You can cancel anytime"}
+  left_column={`Our mission is to reduce risks and
     unnecessary spending as your organization grows. 
     We take over the technological and marketing management burden, so you
-    can invest in your value and get the visibility your effort deserves.</p>`}
-  right_column={`<h2 style="margin-bottom: 15px;" class="no-margin">The best part?<br /> You can cancel anytime.</h2>
-   <p class="p">Contact us today to learn more about our
+    can invest in your value.`}
+  right_column={`
+   Contact us today to learn more about our
     affordable website leasing options and take the first step towards
-    establishing a strong online presence. Lets design a reciprocal business relationship,
-    that leverages expertise with no ties.</p> `}
+    establishing a strong online presence. We
+    provide honest expertise with no ties.`}
 />
 
-<!--
+
 <ReasonsList
   title_one={"Spending thousands of dollars in a website is a risky investment."}
   info_one={`
     It is common to think that as you are paying big money, your success is guaranteed. 
-    But that's wrong. Many companies and individuals are not truthful about the cost and possible 
+    But that's a falacy. Many companies and individuals are not truthful about the cost and possible 
     return of your  investment. Some are taxing your ignorance and trying to survive in a flooded industry.
     <br /> <br />
     <strong>Optimizing an online business takes dedication, insight, and craftsmanship. It is not a transaction.</strong>
@@ -65,9 +66,6 @@
     Our goal is to foster a positive business relationship.
   `}
 />
--->
+
 <style>
-    :global(.p){
-        opacity: .7;
-    }
 </style>
