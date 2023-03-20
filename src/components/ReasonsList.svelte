@@ -1,6 +1,8 @@
 <script>
+  //Utilities
   import { onMount } from "svelte";
 
+  //Controls the behavior of the detail tabs
   onMount(() => {
     const details = document.querySelectorAll("details");
     details.forEach((targetDetail) => {
@@ -15,6 +17,7 @@
     });
   });
 
+  //Data props
   /**
    * @type {string}
    */
@@ -35,15 +38,17 @@
    * @type {string}
    */
   export let title_three;
-
   /**
    * @type {string}
    */
   export let info_three;
 </script>
 
+<!--Title-->
 <h2>3 Reasons to work with us:</h2>
+
 <div class="list">
+  <!--Accordion-->
   <div class="coll">
     <details>
       <summary> <h3>{title_one}</h3></summary>
@@ -61,8 +66,9 @@
     </details>
   </div>
 
+  <!--Image-->
   <div class="colr">
-    <img src="ss.webp" alt="Universal Web Galaxy"/>
+    <img src="a.webp" alt="Universal Web Galaxy" />
   </div>
 </div>
 
@@ -70,7 +76,7 @@
   .list {
     align-items: center;
     display: grid;
-    grid-template-columns: 2.7fr 1.3fr;
+    grid-template-columns: 2.6fr 1.4fr;
     grid-template-areas: "coll colr";
     padding: 30px;
   }
@@ -90,8 +96,8 @@
   }
   details {
     cursor: pointer;
-    background: #d1eaffe9;
-    color: black;
+    background: linear-gradient(45deg, var(--purple) 50%, #4adfd994);
+    color: white;
     border: transparent;
     margin-bottom: 20px;
     padding: 15px 30px;
@@ -99,10 +105,10 @@
   }
 
   details:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.152);
   }
   details[open] {
-    background-color: var(--purple);
+
     color: white;
     padding: 30px 40px 15px;
     backdrop-filter: blur(10px);
@@ -117,7 +123,6 @@
     content: "►";
     font-size: var(--font-size-md);
     margin-right: 10px;
-    /* you can style it however you want, use background-image for example */
   }
 
   details[open] summary::before {

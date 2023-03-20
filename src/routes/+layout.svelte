@@ -99,6 +99,7 @@
   }
   :global(h1, h2, h3, h4, h5) {
     font-family: "Red Hat Display", sans-serif;
+    
   }
   :global(h1) {
     font-size: var(--font-size-xl);

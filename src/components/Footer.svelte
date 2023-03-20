@@ -66,7 +66,7 @@
     padding: 30px 40px 30px;
     gap: 30px;
     border-radius: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     box-shadow: var(--bottomshadow);
   }
 

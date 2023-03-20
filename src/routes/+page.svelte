@@ -1,5 +1,6 @@
 <script>
   import Hero from "../components/Hero.svelte";
+  import PreFooter from "../components/PreFooter.svelte";
   import ReasonsList from "../components/ReasonsList.svelte";
   import SubHero from "../components/SubHero.svelte";
 </script>
@@ -32,7 +33,7 @@
 
 
 <ReasonsList
-  title_one={"Spending thousands of dollars in a website is a risky investment."}
+  title_one={"Spending thousands in a website is a risky investment."}
   info_one={`
     It is common to think that as you are paying big money, your success is guaranteed. 
     But that's a falacy. Many companies and individuals are not truthful about the cost and possible 
@@ -67,5 +68,4 @@
   `}
 />
 
-<style>
-</style>
+<PreFooter />

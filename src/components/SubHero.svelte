@@ -39,7 +39,7 @@
   .columns {
     gap: 40px;
     padding: 0 15px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .col1 {
@@ -77,4 +77,5 @@
     z-index: 9;
     opacity: 0.8;
   }
+  
 </style>
