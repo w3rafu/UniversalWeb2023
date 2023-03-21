@@ -2,29 +2,29 @@
   import Hero from "../components/Hero.svelte";
   import PreFooter from "../components/PreFooter.svelte";
   import ReasonsList from "../components/ReasonsList.svelte";
-  import SubHero from "../components/SubHero.svelte";
+  import Rocketship from "../blocks/Rocketship.svelte";
 </script>
 
 <Hero
-  title={`Online Presence for Small Businesses in a Simple, <span class="no-break">Truthful Way</span>`}
-  subtitle={`For 5 dollars a day, lease the website and marketing support you need to 
-  establish a professional digital presence.`}
-  left_button={"Do I Qualify?"}
+  title={`Online Presence for Small Businesses<br /> in a Simple, <span class="no-break">Truthful Way</span>`}
+  subtitle={`<span style="font-weight: 700;">For 5 dollars a day</span>, <span style="font-weight: 400;">lease the website and marketing support you need to 
+  establish a professional digital presence.</span>`}
+  left_button_label={"Do I Qualify?"}
   left_button_href={"/lease-a-website"}
-  right_button={"Lets Talk"}
+  right_button_label={"Lets Talk"}
   right_button_href={"/contact-us"}
   seats_counter_label={"Seats Left:"}
   seats_count={10}
 />
-<SubHero
+<Rocketship
   bg_img={"ssh.webp"}
   title_left={"We know the challenges of starting and maintaining an organization"}
   title_right={"The best part?<br /> You can cancel anytime"}
-  left_column={`Our mission is to reduce risks and
+  text_left={`Our mission is to reduce risks and
     unnecessary spending as your organization grows. 
     We take over the technological and marketing management burden, so you
     can invest in your value.`}
-  right_column={`
+  text_right={`
    Contact us today to learn more about our
     affordable website leasing options and take the first step towards
     establishing a strong online presence. We

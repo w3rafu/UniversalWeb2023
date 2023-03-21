@@ -4,37 +4,24 @@
 </script>
 
 <nav class="row align-center">
-    {#if $windowSize}
+  {#if $windowSize}
     {#if $windowSize < 1000}
-    <MenuMobile />
-  {:else}
-  <ul class="row align-center">
-    <li>
-      <a href="/">
+      <MenuMobile />
+    {:else}
+      <button class="services">
         Services
         <span class="material-symbols-outlined"> arrow_drop_down </span>
-      </a>
-    </li>
-    <li>
-      <a href="/">
-        About
+      </button>
+      <button class="learn">
+        Learn
         <span class="material-symbols-outlined"> arrow_drop_down </span>
-      </a>
-    </li>
-    <li>
-      <a href="/">
-        Learn <span class="material-symbols-outlined"> arrow_drop_down </span>
-      </a>
-    </li>
-  </ul>
-
-  <button class="contact">
-    <span class="material-symbols-outlined"> mark_email_read </span>
-    Contact
-  </button>
-  {/if}
+      </button>
+      <button class="contact">
+        <span class="material-symbols-outlined"> mark_email_read </span>
+        Contact
+      </button>
     {/if}
-  
+  {/if}
 </nav>
 
 <style>
@@ -42,37 +29,32 @@
     min-width: 100%;
     justify-content: end;
   }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  ul li {
-    padding: 0 30px 0 0;
-  }
-  a {
-    display: flex;
-    align-items: center;
+
+  .services {
+    background-color: rgba(255, 255, 255, 0.081);
     color: white;
-    font-size: var(--font-size-md);
-    text-decoration: none;
-    font-family: "Red Hat Display" sans-serif;
-    font-weight: 700;
   }
 
-  a .material-symbols-outlined {
-    font-size: var(--font-size-lg);
+  .learn {
+    background: transparent;
     color: white;
   }
 
   button {
     display: flex;
+    margin-left: 15px;
+    padding-right: 5px;
+  }
+
+  .material-symbols-outlined {
+    font-weight: 800;
+    font-size: var(--font-size-lg);
+  }
+  .contact {
+    padding-right: 15px;
   }
 
   .contact .material-symbols-outlined {
-    font-weight: 800;
-    font-size: var(--font-size-lg);
     margin-right: 7px;
   }
-
-
 </style>

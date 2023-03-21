@@ -1,47 +1,51 @@
-<div>
+<script>
+    import IconButton from "../elements/IconButton.svelte";
+</script>
+
+<section id="advertising" class="row">
+    <!--Images-->
     <div class="pics">
-        <img src="guy-pink.webp" alt="" class="pink">
-        <img src="guy-surpise.webp" alt="">
-
-        <img src="girl-purple.webp" alt="">
-                <img src="girl-blue.webp" alt="">
+        <img src="guy-pink.webp" alt="Person full of tasks" class="pink" />
+        <img src="guy-surpise.webp" alt="Person surprised" />
+        <img src="girl-purple.webp" alt="Person analyzing" />
+        <img src="girl-blue.webp" alt="Person being goofy" />
     </div>
+
+    <!--Headlines-->
     <div class="text">
-        <h2>
-            Establish a strong online presence 
-        </h2>
-        <h2 class="glow">
-            Without risky costs and management burden 
-        </h2>
-        <h2>
-            Keeping flexibility and control over your next step
-        </h2>
-        <button><span class="material-symbols-outlined">
-          ring_volume
-        </span>Lets talk</button
-      >
-
+        <h2>Establish a strong online presence</h2>
+        <h2 class="glow">Without risky costs and management burden</h2>
+        <h2>Keeping flexibility and control over your next step</h2>
     </div>
 
-</div>
-
+    <!--Call to action-->
+    <IconButton
+        icon={"ring_volume"}
+        label={"Lets Talk"}
+        href={"/"}
+        background={"green"}
+        color={"white"}
+    />
+</section>
 
 <style>
+    #advertising {
+        margin: 60px auto;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .glow {
-        text-shadow: 0 0 30px #4adfd994;
         font-weight: 700 !important;
+        text-shadow: 0 0 30px #4adfd994;
     }
 
-    div{
-        padding: 15px 30px;
-    }
-
-    h2{
-        margin: 7px 0;
+    h2 {
         font-size: var(--font-size-lg);
         font-weight: 400;
         letter-spacing: 0.03em;
+        margin: 7px 0;
     }
 
     div img {
@@ -51,38 +55,26 @@
         height: 220px;
         margin: 30px 0 10px;
     }
-    .text{
+    .text {
         display: flex;
         flex-direction: column;
-        text-align: center;
         justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
     }
 
     .pics {
         display: flex;
-        justify-content: space-evenly;
         filter: drop-shadow(20px 0 20px rgba(0, 0, 0, 0.5));
-    }
-
-    button {
-        display: flex;
-        background: var(--green);
-        width: max-content;
-        padding: 15px 30px;
-        margin: 25px auto;
-    }
-
-    .material-symbols-outlined {
-        margin-right: 10px;
+        justify-content: space-evenly;
     }
 
     .pics {
-        width: 90%;
         margin: auto;
+        width: 90%;
     }
 
     .pink {
         object-position: 20% !important;
     }
-
 </style>

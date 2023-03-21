@@ -1,13 +1,15 @@
 <script>
+  //Import UI children
   import FooterWidget from "../ui-items/FooterWidget.svelte";
   import FooterNotice from "../ui-items/FooterNotice.svelte";
 </script>
 
 <footer class="row">
-  <div class="area1">
+  <div class="column1">
     <FooterNotice />
   </div>
-  <div class="area2">
+
+  <div class="column2">
     <FooterWidget
       icon={"hub"}
       title={"Learn"}
@@ -19,7 +21,8 @@
       ]}
     />
   </div>
-  <div class="area3">
+
+  <div class="column3">
     <FooterWidget
       icon={"approval_delegation"}
       title={"Values"}
@@ -31,7 +34,8 @@
       ]}
     />
   </div>
-  <div class="area4">
+
+  <div class="column4">
     <FooterWidget
       icon={"trending_up"}
       title={"Services"}
@@ -43,44 +47,56 @@
       ]}
     />
   </div>
-  
-  <div class="area5">
 
+  <div class="column5">
     <div>
-        <p>
-            &copy; 2023 Universal Web <span>🇺🇸</span>Carbondale, IL. 
-          </p>
+      <p>
+        &copy; 2023 Universal Web <span>🇺🇸</span>Carbondale, IL.
+      </p>
     </div>
-   
   </div>
 </footer>
 
 <style>
   footer {
+    background-color: var(--darkover);
+    border-radius: 20px;
+    box-shadow: var(--bottomshadow);
     display: grid;
+    gap: 30px;
     grid-template-columns: 0.9fr 0.5fr 0.5fr 0.5fr;
     grid-template-rows: 1fr auto;
-    grid-template-areas: 'area1 area2 area3 area4'
-    'area5 area5 area5 area5';
-    background-color: var(--darkover);
-    padding: 30px 40px 30px;
-    gap: 30px;
-    border-radius: 20px;
+    grid-template-areas:
+      "column1 column2 column3 column4"
+      "column5 column5 column5 column5";
     margin-top: 20px;
-    box-shadow: var(--bottomshadow);
+    padding: 30px 40px 30px;
   }
-
-  .area1{grid-area:area1;}
-  .area2{grid-area:area2;}
-  .area3{grid-area:area3;}
-  .area4{grid-area:area4;}
-  .area5{grid-area:area5; height: auto; margin-top: -40px; display: flex; justify-content: center;}
-span {
-    font-size: var(--font-size-lg);
-    margin: 0 10px
-}
-p {
+  .column1 {
+    grid-area: column1;
+  }
+  .column2 {
+    grid-area: column2;
+  }
+  .column3 {
+    grid-area: column3;
+  }
+  .column4 {
+    grid-area: column4;
+  }
+  .column5 {
     display: flex;
+    grid-area: column5;
+    height: auto;
+    justify-content: center;
+    margin-top: -40px;
+  }
+  span {
+    font-size: var(--font-size-lg);
+    margin: 0 10px;
+  }
+  p {
     align-items: center;
-}
+    display: flex;
+  }
 </style>

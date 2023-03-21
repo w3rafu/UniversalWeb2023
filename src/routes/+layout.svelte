@@ -9,7 +9,7 @@
   import { onMount } from "svelte";
 
   /**
-   * Listens to windows size and scolling vertically
+   * Listens to viewport size and scolling y pos.
   */
   /**
    * @type {number}
@@ -19,14 +19,20 @@
    * @type {number}
    */
   let scrollY;
+
+  //Initial viewport info
   onMount(() => {
     innerWidth = window.innerWidth;
     scrollY = window.scrollY;
   });
+
+  //Update viewport state on change
   $: windowSize.set(innerWidth);
   $: scrolled.set(scrollY)
 
 </script>
+
+<!--Bind window events-->
 <svelte:window bind:innerWidth bind:scrollY/>
 
 <!--Font and Icon Support-->
@@ -48,6 +54,7 @@
   <slot />
 <Footer />
 
+<!--The stu;e-->
 <style>
   :global(:root) {
     --darkover: #0d0c18c1;
@@ -55,12 +62,8 @@
     --lightBlue: #1b6dde;
     --link: #bcede9;
     --green: #14d752;
-    --purplegradient: linear-gradient(
-      45deg,
-      var(--purple) 10%,
-      #b100e1 60%,
-      #3ecdd1
-    );
+    --purplegradientright: linear-gradient(45deg, var(--purple) 50%, #4adfd994);
+    --purplegradientleft: linear-gradient(-45deg, var(--purple) 50%, #4adfd994);
     --purple: rgba(107, 3, 225, 0.438);
     --bottomshadow: 0 20px 25px 0 rgba(0, 0, 0, 0.356);
     --font-size-sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.84rem);
@@ -84,7 +87,7 @@
     background: #17181b;
     font-family: "Source Sans Pro", sans-serif;
     color: white;
-    padding: 30px;
+    padding: 15px 30px;
     margin: 0;
     font-size: var(--font-size-base);
     background-image: url('04-1.webp');
