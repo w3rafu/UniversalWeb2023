@@ -48,7 +48,7 @@
 </script>
 
 <!--Title-->
-<h2>3 Reasons to work with us:</h2>
+<h2>3 Reasons to work with us</h2>
 
 <div class="list">
 
@@ -73,13 +73,14 @@
     align-items: center;
     display: grid;
     grid-template-areas: "left-column right-column";
-    grid-template-columns: 2.6fr 1.4fr;
+    grid-template-columns: 2.2fr 1.4fr;
     margin-bottom: 30px;
-    padding: 30px;
+    padding: 30px 60px;
   }
 
   .left-column {
     grid-area: left-column;
+
   }
   .right-column {
     grid-area: right-column;
@@ -96,5 +97,4 @@
     text-align: center;
     margin: 0;
   }
-
 </style>

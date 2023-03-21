@@ -47,7 +47,8 @@
   .columns {
     gap: 40px;
     margin-bottom: 40px;
-    padding: 0 15px;
+    padding: 0 30px;
+    justify-content: center;
   }
 
   .left-column {
@@ -56,10 +57,11 @@
     border-radius: 30px;
     box-shadow: var(--bottomshadow);
     height: max-content;
-    padding: 15px 30px 30px;
+    padding: 10px 30px 20px;
     text-align: right;
-    width: 50%;
+    width: 44%;
   }
+  
 
   .image-container {
     max-width: 15px;
@@ -80,8 +82,8 @@
     border-radius: 30px;
     box-shadow: var(--bottomshadow);
     height: max-content;
-    padding: 15px 30px 30px;
-    width: 50%;
+    padding: 10px 30px 20px;
+    width: 44%;
   }
 
   p {

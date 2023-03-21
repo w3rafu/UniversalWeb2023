@@ -83,7 +83,7 @@
 <style>
 
   #hero {
-    padding: 40px 60px 100px;
+    padding: 40px 60px 120px;
   }
 
   h1 {

@@ -23,11 +23,13 @@
     details {
         cursor: pointer;
         background: linear-gradient(45deg, var(--purple) 50%, #4adfd994);
+        border-radius: 20px;
+
         color: white;
         border: transparent;
         margin-bottom: 20px;
         padding: 15px 30px;
-        border-radius: 20px;
+
     }
     details:hover {
         background-color: rgba(255, 255, 255, 0.152);

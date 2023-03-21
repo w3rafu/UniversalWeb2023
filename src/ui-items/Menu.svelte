@@ -1,6 +1,8 @@
 <script>
   import { windowSize } from "../stores";
   import MenuMobile from "./MenuMobile.svelte";
+  import {createEventDispatcher} from 'svelte';
+  const dispatch = createEventDispatcher();
 </script>
 
 <nav class="row align-center">
@@ -8,11 +10,12 @@
     {#if $windowSize < 1000}
       <MenuMobile />
     {:else}
-      <button class="services">
+      <button class="services" on:click={() => dispatch('dropdown', {option: 'services'})}>
         Services
         <span class="material-symbols-outlined"> arrow_drop_down </span>
       </button>
-      <button class="learn">
+      
+      <button class="learn" on:click={() => dispatch('dropdown', {option: 'learn'})}>
         Learn
         <span class="material-symbols-outlined"> arrow_drop_down </span>
       </button>
@@ -24,8 +27,13 @@
   {/if}
 </nav>
 
+
+
 <style>
+
+
   nav {
+    display: flex;
     min-width: 100%;
     justify-content: end;
   }
