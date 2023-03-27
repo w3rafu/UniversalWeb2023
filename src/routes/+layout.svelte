@@ -1,6 +1,6 @@
 <script>
   //UI components
-  import Header from "../components/Header.svelte";
+  import Header from '../components/Header.svelte'
   import Footer from "../components/Footer.svelte";
   //Window State
   import { scrolled } from "../stores";

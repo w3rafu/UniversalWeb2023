@@ -93,19 +93,20 @@
 
   h2 {
     font-weight: 500;
-    opacity: 0.8;
+
     width: 90%;
+    font-size: var(--font-size-md);
   }
 
   .hero-image {
     border-radius: 30px;
     box-shadow: var(--bottomshadow);
-    height: 280px;
+    height: 270px;
     margin-right: 40px;
     margin-top: 5px;
     object-fit: cover;
     object-position: 10%;
-    width: 280px;
+    width: 270px;
   }
 
   @media (max-width: 1000px) {

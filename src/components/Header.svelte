@@ -1,34 +1,79 @@
 <script>
+  import { onMount } from "svelte";
+
   //Import UI items
   import Brand from "../ui-items/Brand.svelte";
   import Menu from "../ui-items/Menu.svelte";
+  import DropdownItem from "../ui-items/ DropdownItem.svelte";
 
   //Window size state
   import { windowSize } from "../stores";
   // Scrolling Y location
   import { scrolled } from "../stores";
 
-  let dropdown_services = false;
-  let dropdown_learn = false;
+  //DOM elements variables
+  /**
+   * @type {any}
+   */
+  let services_modal;
+  /**
+   * @type {any}
+   */
+  let learn_modal;
+  /**
+   * @type {any}
+   */
+  let htmldocument;
+  /**
+   * @type {Element | null}
+   */
+  let closeButton;
 
+  //Find DOM elements on load
+  onMount(() => {
+    services_modal = document.getElementById("services-modal");
+    learn_modal = document.getElementById("learn-modal");
+    htmldocument = document.getElementsByTagName("body");
+    services_modal.addEventListener('click', (ev) => {
+    if (ev.offsetX < 0 || ev.offsetX > ev.target.offsetWidth ||
+        ev.offsetY < 0 || ev.offsetY > ev.target.offsetHeight) {
+          services_modal.close();
+          htmldocument[0].style.overflow = "auto";
+    }
+});
+  });
+
+  let modalIsOpen = false;
+
+  //Process showing modal, disable scrolling and offer closing option.
   let handleDropdown = (
     /** @type {{ detail: { option: string; }; }} */ event
   ) => {
     if (event.detail.option === "services") {
-      dropdown_services = !dropdown_services;
-      dropdown_learn = false;
+      services_modal.showModal();
+      htmldocument[0].style.overflow = "hidden";
+      closeButton = document.querySelector(".close-services");
+      modalIsOpen = true
     }
     if (event.detail.option === "learn") {
-      dropdown_learn = !dropdown_learn;
-      dropdown_services = false;
+      learn_modal.showModal();
+      htmldocument[0].style.overflow = "hidden";
+      closeButton = document.querySelector(".close-learn");
+      modalIsOpen = true
     }
   };
 
-  const closeDropdown = (event) => {
-    dropdown_services = false;
-    dropdown_learn = false;
+  //Close modal
+  let closeModal = () => {
+    // @ts-ignore
+    closeButton.parentElement.parentElement.close();
+    htmldocument[0].style.overflow = "auto";
   };
+
+  
 </script>
+
+
 
 <!--The header 
   (applies dynamic class on resizing or scrolling)
@@ -38,50 +83,79 @@
   <Menu on:dropdown={handleDropdown} />
 </header>
 
-{#if dropdown_services}
-<div class="overlay" on:click={closeDropdown} on:keydown={closeDropdown}/>
-
-  <div class="dropdown" aria-modal="true" role="alertdialog">
-    <button>Lease a Website</button>
-    <button>Search Engine Optimization</button>
-    <button>Accesibility Compliance</button>
-    <button>Cybersecurity Audit</button>
+<!--Services Modal-->
+<dialog id="services-modal" class:fix-top={$scrolled > 30}>
+  <div class="dropdownmenu-wrapper">
+    <DropdownItem
+      title={"Lease a Website"}
+      icon={"captive_portal"}
+    />
+    <DropdownItem
+      title={"Search Engine Optimization"}
+      icon={"rocket"}
+    />
+    <DropdownItem
+      title={"Accesibility Compliance"}
+      icon={"accessible"}
+    />
+    <DropdownItem
+      title={"Cybersecurity Audit"}
+      icon={"vpn_key_alert"}
+    />
   </div>
-{/if}
+  <div>
+    <button class="close-services" on:click={closeModal}>
+      <span class="material-symbols-outlined"> cancel </span>
+    </button>
+  </div>
+</dialog>
 
-{#if dropdown_learn}
-  <div class="overlay" />
-  <nav class="dropdown" aria-modal="true" role="alertdialog">
+<!--Learn Modal-->
+<dialog id="learn-modal">
+  <div>
     <button>About us</button>
     <button>Articles</button>
     <button>Knowledge Base</button>
     <button>Ethical Statement</button>
-  </nav>
-{/if}
+  </div>
+  <div>
+    <button class="close-learn" on:click={closeModal}>
+      <span class="material-symbols-outlined"> cancel </span>
+    </button>
+  </div>
+</dialog>
 
 <style>
-  .overlay {
-    background-color: rgba(0, 0, 26, 0.734);
-    backdrop-filter: blur(10px);
-    height: 100%;
+  .dropdownmenu-wrapper {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    position: absolute;
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
     top: 0;
-    z-index: 3;
-    margin: 0 -30px;
+    bottom: 0;
+
+    right: 0;
   }
 
-  .dropdown {
+
+
+  dialog {
     background: var(--purplegradientright);
     backdrop-filter: blur(10px);
-    position: absolute;
-    padding: 50px;
+    padding: 40px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    width: 80%;
+    border: none;
+    width: 90%;
     margin: 0 auto;
     left: 0;
     right: 0;
+    top: 130px;
     z-index: 4;
     box-shadow: var(--bottomshadow);
   }
@@ -107,6 +181,26 @@
     border-radius: 0;
     box-shadow: 0 0 30px black;
     margin: 0 -30px;
+  }
+
+  .fix-top {
+    top: 105px;
+  }
+
+  .fix-top::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    backdrop-filter: grayscale(100%);;
+    top: 105px;
+  }
+
+  .close-learn,
+  .close-services {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    color: white;
   }
 
   @media (max-width: 1000px) {
