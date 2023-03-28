@@ -1,12 +1,12 @@
 <script>
   import Hero from "../components/Hero.svelte";
-  import PreFooter from "../components/PreFooter.svelte";
-  import ReasonsList from "../components/ReasonsList.svelte";
+  import PreFooter from "../blocks/PreFooter.svelte";
+  import ReasonsList from "../blocks/ReasonsList.svelte";
   import Rocketship from "../blocks/Rocketship.svelte";
 </script>
 
 <Hero
-  title={`Online Presence for Small Businesses<br /> in a Simple, <span class="no-break">Truthful Way</span>`}
+  title={`Online Presence for Small Businesses in a Simple, <span class="no-break">Truthful Way</span>`}
   subtitle={`<span style="font-weight: 700;">For 5 dollars a day</span>, <span style="font-weight: 400;">lease the website and marketing support you need to 
   establish a professional digital presence.</span>`}
   left_button_label={"Do I Qualify?"}
@@ -18,7 +18,7 @@
 />
 <Rocketship
   bg_img={"ssh.webp"}
-  title_left={"We know the challenges of starting and maintaining an organization"}
+  title_left={"We know the challenges of <br />starting and maintaining"}
   title_right={"The best part?<br /> You can cancel anytime"}
   text_left={`Our mission is to reduce risks and
     unnecessary spending as your organization grows. 

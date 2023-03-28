@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
 
   //UI
-  import AccordionTab from "../elements/AccordionTab.svelte";
+  import AccordionTab from "../ui-items/elements/AccordionTab.svelte";
 
   //Controls the behavior of the tabs -> close if another is open
   onMount(() => {
@@ -73,15 +73,20 @@
     align-items: center;
     display: grid;
     grid-template-areas: "left-column right-column";
-    grid-template-columns: 2.2fr 1.4fr;
+    grid-template-columns: 2.4fr 1.6fr;
     margin-bottom: 30px;
     padding: 30px 60px;
   }
 
   .left-column {
     grid-area: left-column;
-
   }
+
+  :global(.left-column details:nth-child(2)){
+    margin-left: 30px;
+    margin-right: -30px;
+  }
+
   .right-column {
     grid-area: right-column;
     margin: -100px 0;
@@ -95,6 +100,6 @@
   h2 {
     font-size: var(--font-size-xl);
     text-align: center;
-    margin: 0;
+
   }
 </style>

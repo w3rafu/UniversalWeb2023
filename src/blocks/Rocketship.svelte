@@ -45,8 +45,8 @@
 
 <style>
   .columns {
-    gap: 40px;
-    margin-bottom: 40px;
+    gap: 30px;
+    margin: 60px 0 60px;
     padding: 0 30px;
     justify-content: center;
   }
@@ -57,9 +57,10 @@
     border-radius: 30px;
     box-shadow: var(--bottomshadow);
     height: max-content;
-    padding: 10px 30px 20px;
+    padding: 30px;
     text-align: right;
     width: 44%;
+    margin-top: -100px;
   }
   
 
@@ -68,7 +69,7 @@
   }
 
   .image-container img {
-    filter: drop-shadow(0px 70px 40px rgb(128, 214, 251));
+    filter: drop-shadow(0px 70px 40px #ffac53);
     left: -137px;
     max-width: 300px;
     top: -60px;
@@ -82,13 +83,19 @@
     border-radius: 30px;
     box-shadow: var(--bottomshadow);
     height: max-content;
-    padding: 10px 30px 20px;
+    padding: 30px;
     width: 44%;
+    margin-top: 40px;
   }
 
   p {
     opacity: 0.8;
     z-index: 9;
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0 0 10px;
   }
   
 </style>

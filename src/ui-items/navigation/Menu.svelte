@@ -1,5 +1,5 @@
 <script>
-  import { windowSize } from "../stores";
+  import { windowSize } from "../../stores";
   import MenuMobile from "./MenuMobile.svelte";
   import {createEventDispatcher} from 'svelte';
   const dispatch = createEventDispatcher();

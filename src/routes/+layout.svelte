@@ -95,6 +95,7 @@
     background-attachment: fixed;
     max-width: 1440px;
     margin: auto;
+    letter-spacing: 0.02em;
   }
   :global(p) {
     line-height: 1.5 !important;

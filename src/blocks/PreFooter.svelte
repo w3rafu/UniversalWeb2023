@@ -1,5 +1,5 @@
 <script>
-  import IconButton from "../elements/IconButton.svelte";
+  import IconButton from "../ui-items/elements/IconButton.svelte";
   import { onMount } from "svelte";
 </script>
 

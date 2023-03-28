@@ -27,7 +27,7 @@
     button {
         display: grid;
         grid-template-columns: 0.1fr 1fr;
-        width: 280px;
+        width: 260px;
         gap: 7px;
     }
 

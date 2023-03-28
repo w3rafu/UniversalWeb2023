@@ -1,7 +1,7 @@
 <script>
   //Import UI children
-  import FooterWidget from "../ui-items/FooterWidget.svelte";
-  import FooterNotice from "../ui-items/FooterNotice.svelte";
+  import FooterWidget from "../ui-items/widgets/FooterWidget.svelte";
+  import FooterNotice from "../ui-items/widgets/FooterNotice.svelte";
 </script>
 
 <footer class="row">

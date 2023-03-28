@@ -20,16 +20,16 @@
 <style>
     .seats-counter {
         color: white;
-        backdrop-filter: blur(10px);
-        background-color: var(--darkover);
+  
+  
         border-radius: 15px;
-        box-shadow: var(--bottomshadow);
+        box-shadow: 0 0 30px var(--green);
         font-family: "Red Hat Display";
         font-weight: 500;
         letter-spacing: 0.03em;
         margin-right: 10px;
         width: max-content;
-        padding: 15px;
+        padding: 11px;
     }
 
     .counter-led {
