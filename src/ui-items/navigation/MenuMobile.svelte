@@ -46,7 +46,9 @@
     font-family: "Source Sans Pro";
     font-size: var(--font-size-md);
     margin: 0 5px 0 0;
-    opacity: 0.4 !important;
+
+    font-weight: 500;
+    font-weight: 600;
   }
 
   #toggle-mobile .material-symbols-outlined {

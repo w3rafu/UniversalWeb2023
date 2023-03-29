@@ -97,7 +97,7 @@
     top: 130px;
     z-index: 4;
     box-shadow: var(--bottomshadow);
-    max-width: 1280px;
+    max-width: 1180px;
   }
   .dropdownmenu-wrapper {
     display: flex;

@@ -6,19 +6,24 @@
 </script>
 
 <Hero
-  title={`Online Presence for Small Businesses in a Simple, <span class="no-break">Truthful Way</span>`}
-  subtitle={`<span style="font-weight: 700;">For 5 dollars a day</span>, <span style="font-weight: 400;">lease the website and marketing support you need to 
-  establish a professional digital presence.</span>`}
-  left_button_label={"Do I Qualify?"}
-  left_button_href={"/lease-a-website"}
-  right_button_label={"Lets Talk"}
-  right_button_href={"/contact-us"}
-  seats_counter_label={"Seats Left:"}
-  seats_count={10}
+  data={{
+    title: `Online Presence for Small Businesses in a Simple, 
+    <span class="no-break">Truthful Way</span>`,
+    subtitle: `<span style="font-weight: 700;">For 5 dollars a day</span>, 
+    <span style="font-weight: 400;">lease the website and marketing support you need to 
+    establish a professional digital presence.</span>`,
+    left_button_label: "Do I Qualify?",
+    right_button_label: "Lets Talk",
+    left_button_href: "",
+    right_button_href: "",
+    seats_counter_label: "Seats Left:",
+    seats_count: 19,
+  }}
 />
+
 <Rocketship
   bg_img={"ssh.webp"}
-  title_left={"We know the challenges of <br />starting and maintaining"}
+  title_left={"We know the challenges of <br class='hide-mobile'/>starting and maintaining"}
   title_right={"The best part?<br /> You can cancel anytime"}
   text_left={`Our mission is to reduce risks and
     unnecessary spending as your organization grows. 
@@ -30,7 +35,6 @@
     establishing a strong online presence. We
     provide honest expertise with no ties.`}
 />
-
 
 <ReasonsList
   title_one={"Spending thousands in a website is a risky investment."}

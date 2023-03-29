@@ -36,7 +36,7 @@
   </div>
   
 <!--Right purple card-->
-  <div class="right-colum">
+  <div class="right-column">
     <h2>{@html title_right}</h2>
     <p>{@html text_right}</p>
   </div>
@@ -45,7 +45,7 @@
 
 <style>
   .columns {
-    gap: 30px;
+    gap: 60px;
     margin: 60px 0 60px;
     padding: 0 30px;
     justify-content: center;
@@ -55,7 +55,7 @@
     backdrop-filter: blur(3px);
     background: var(--purplegradientright);
     border-radius: 30px;
-    box-shadow: var(--bottomshadow);
+
     height: max-content;
     padding: 30px;
     text-align: right;
@@ -74,18 +74,19 @@
     max-width: 300px;
     top: -60px;
     position: relative;
-    z-index: -1;
+    z-index: 7;
   }
 
-  .right-colum {
+  .right-column {
     backdrop-filter: blur(3px);
     background: var(--purplegradientleft);
     border-radius: 30px;
-    box-shadow: var(--bottomshadow);
+
     height: max-content;
     padding: 30px;
     width: 44%;
-    margin-top: 40px;
+    margin-top: 60px;
+
   }
 
   p {
@@ -96,6 +97,57 @@
 
   h2 {
     margin: 0 0 10px;
+  }
+
+  @media(max-width: 1000px){
+    .columns {
+      gap: 0;
+      margin: 60px 30px;
+      padding: 0;
+    }
+    .left-column, .right-column {
+      width: 60%;
+    }
+    .right-column {
+      margin-left: auto;
+      margin-top: -200px;
+      z-index: 10;
+    }
+
+    .image-container img {
+
+      margin: -40px 0 0;
+      z-index: 99;
+      top: -200px;
+      right: 0;
+      left: 500px;
+    }
+  }
+
+  @media(max-width: 780px){
+    .image-container img {
+
+
+left: 400px;
+}
+  }
+
+  @media(max-width: 650px){
+    .left-column, .right-column {
+      margin-top: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .image-container {
+      display: flex;
+
+      justify-content: center;
+      max-width: 100%;
+    }
+    .image-container img {
+      position: inherit;
+      margin: -40px 0 0;
+    }
   }
   
 </style>

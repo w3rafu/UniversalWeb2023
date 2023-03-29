@@ -8,17 +8,9 @@
   //Utilities
   import { onMount } from "svelte";
 
-  /**
-   * Listens to viewport size and scolling y pos.
-  */
-  /**
-   * @type {number}
-   */
-  let innerWidth;
-  /**
-   * @type {number}
-   */
-  let scrollY;
+  /** Listens to viewport size and scolling y pos.*/
+  let innerWidth = 0;
+  let scrollY = 0;
 
   //Initial viewport info
   onMount(() => {
@@ -29,7 +21,6 @@
   //Update viewport state on change
   $: windowSize.set(innerWidth);
   $: scrolled.set(scrollY)
-
 </script>
 
 <!--Bind window events-->
@@ -50,11 +41,18 @@
 
 <!--The Content -->
 <Header />
-  <slot />
+  <main>
+    <slot />
+  </main>
 <Footer />
 
 <!--The stu;e-->
 <style>
+  
+  main {
+    margin: 0 30px;
+  }
+
   :global(:root) {
     --darkover: #0d0c18c1;
     --blue: #060b38;
@@ -138,7 +136,7 @@
 
   @media (max-width: 1000px) {
     :global(body) {
-      padding: 0;
+      padding: 0 !important;
       overflow-x: hidden;
     }
     :global(.row) {

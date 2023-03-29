@@ -29,7 +29,8 @@
 
   //Handle dropdown navigation
   let handleDropdown = (
-    /** @type {{ detail: { option: string; }; }} */ event
+    /** @type {{ detail: { option: string; }; }} */
+    event
   ) => {
     if (event.detail.option === "services") services_modal.showModal();
     if (event.detail.option === "learn") learn_modal.showModal();
@@ -39,7 +40,7 @@
 <!--The header 
   (applies dynamic class on resizing or scrolling)
 -->
-<header class:resized={$windowSize < 1000} class:scrolled={$scrolled > 30}>
+<header class:resized={$windowSize <= 1000} class:scrolled={$scrolled > 30}>
   <Logo />
   <Menu on:dropdown={handleDropdown} />
 </header>
@@ -52,7 +53,7 @@
     ["captive_portal", "Lease a Website"],
     ["rocket", "Search Engine Optimization"],
     ["accessible", "Accessibility Compliance"],
-    ["vpn_key_alert", "Cybersecurity Audit"],
+    ["detection_and_zone", "Cybersecurity Audit"],
   ]}
 />
 
@@ -61,10 +62,10 @@
 <MenuDropdown
   menu_name={"learn-modal"}
   menu_items={[
-    ["captive_portal", "About us"],
-    ["rocket", "Articles"],
-    ["accessible", "Knowledge Base"],
-    ["vpn_key_alert", "Ethical Statement"],
+    ["groups_3", "About us"],
+    ["library_books", "Articles"],
+    ["local_library", "Knowledge Base"],
+    ["ecg_heart", "Ethical Statement"],
   ]}
 />
 
@@ -92,7 +93,7 @@
     margin: 0 -30px;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1001px) {
     .resized {
       margin: 0 0 10px;
       width: 100%;
@@ -102,12 +103,16 @@
       justify-content: space-between;
       width: 100%;
     }
+    .scrolled {
+      padding: 20px;
+    }
   }
 
   @media (min-width: 2240px) {
     .scrolled {
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
+
     }
   }
 </style>

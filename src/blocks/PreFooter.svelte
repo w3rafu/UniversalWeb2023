@@ -1,6 +1,28 @@
 <script>
   import IconButton from "../ui-items/elements/IconButton.svelte";
   import { onMount } from "svelte";
+
+  onMount(() => {
+    let images = document.querySelectorAll(".roundedimg");
+    images.forEach((image) => {
+      image.addEventListener("mouseover", (event) => {
+        images.forEach((img) => {
+          if (event.target !== img) {
+            // @ts-ignore
+            img.style.opacity = "0.3";
+          }
+        });
+      });
+      image.addEventListener("mouseleave", (event) => {
+        images.forEach((img) => {
+          if (event.target !== img) {
+            // @ts-ignore
+            img.style.opacity = "1";
+          }
+        });
+      });
+    });
+  });
 </script>
 
 <section id="advertising" class="row">
@@ -34,7 +56,7 @@
 
 <style>
   #advertising {
-    margin: 60px auto 100px;
+    margin: 20px auto 100px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -56,8 +78,8 @@
   div img {
     border-radius: 50%;
     object-fit: cover;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     margin: 30px 0 10px;
   }
   .text {
@@ -70,6 +92,7 @@
 
   .pics {
     display: flex;
+    flex-wrap: wrap;
     filter: drop-shadow(20px 0 20px rgba(0, 0, 0, 0.5));
     justify-content: space-evenly;
   }
@@ -81,5 +104,38 @@
 
   .pink {
     object-position: 20% !important;
+  }
+
+  .roundedimg {
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .roundedimg:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  @media (max-width: 1000px) {
+    div img {
+      width: 140px;
+      height: 140px;
+      margin: 10px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    div img {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+    }
+
+    #advertising {
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
   }
 </style>

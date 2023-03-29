@@ -25,8 +25,9 @@
         font-size: var(--font-size-xl);
     }
     button {
-        display: grid;
-        grid-template-columns: 0.1fr 1fr;
+        display: flex;
+        justify-content: center;
+
         width: 260px;
         gap: 7px;
     }

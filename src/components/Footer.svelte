@@ -17,7 +17,7 @@
         ["/", "About us"],
         ["/", "Articles"],
         ["/", "Knowledge Base"],
-        ["/", "Contact Us"],
+        ["/contact-us", "Contact Us"],
       ]}
     />
   </div>
@@ -99,4 +99,64 @@
     align-items: center;
     display: flex;
   }
+
+  @media(max-width: 1000px){
+    footer {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "column1 column1 column1"
+        "column2 column3 column4"
+        "column5 column5 column5"
+      ;
+    }
+    .column1 {
+      text-align: center;
+    }
+
+    :global(.col1) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    :global(.col1 .head) {
+      align-items: center;
+    }
+
+
+    :global(.col1 .head .material-symbols-outlined)  {
+      margin: 0 !important;
+    }
+  }
+
+  @media(max-width: 650px){
+    footer {
+      display: flex;
+      align-items: center;
+      padding: 30px;
+    }
+    
+
+    .column2, .column3, .column4, .column5 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    :global(.col1, .col2, .col3, .col4){
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .column5 {
+      margin-top: 20px;
+    }
+  }
+
 </style>

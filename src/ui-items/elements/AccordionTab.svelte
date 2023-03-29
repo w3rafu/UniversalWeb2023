@@ -19,6 +19,7 @@
     h3 {
         padding: 0;
         display: inline;
+
     }
     details {
         cursor: pointer;
@@ -28,7 +29,7 @@
         color: white;
         border: transparent;
         margin-bottom: 20px;
-        padding: 15px 30px;
+        padding: 15px ;
 
     }
     details:hover {
@@ -36,9 +37,18 @@
     }
     details[open] {
         color: white;
-        padding: 30px 40px 15px;
+        padding: 30px 30px 15px;
         backdrop-filter: blur(10px);
         box-shadow: var(--bottomshadow);
+ 
+    }
+
+    details[open] h3 {
+        font-weight: 600;
+    }
+
+    details[open] p {
+        opacity: .8 !important;  
     }
 
     summary {

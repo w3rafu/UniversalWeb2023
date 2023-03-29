@@ -44,9 +44,22 @@
         display: flex;
         box-shadow: var(--bottomshadow);
         margin-right: 15px;
+        padding: 10px 15px;
+        z-index: 10;
+    }
+    .material-symbols-outlined {
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+        color: black;
     }
 
     span {
         margin-right: 10px;
+    }
+
+    @media(max-width: 650px){
+        button{
+            margin: 0;
+        }
     }
 </style>
