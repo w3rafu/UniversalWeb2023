@@ -2,6 +2,7 @@
   //Import UI children
   import FooterWidget from "../ui-items/widgets/FooterWidget.svelte";
   import FooterNotice from "../ui-items/widgets/FooterNotice.svelte";
+  import { app_navigation } from "../stores";
 </script>
 
 <footer class="row">
@@ -13,12 +14,7 @@
     <FooterWidget
       icon={"hub"}
       title={"Learn"}
-      links={[
-        ["/", "About us"],
-        ["/", "Articles"],
-        ["/", "Knowledge Base"],
-        ["/contact-us", "Contact Us"],
-      ]}
+      links={$app_navigation.learn}
     />
   </div>
 
@@ -26,12 +22,7 @@
     <FooterWidget
       icon={"approval_delegation"}
       title={"Values"}
-      links={[
-        ["/", "Ethical Statement"],
-        ["/", "Join our Team"],
-        ["/", "Privacy Policy"],
-        ["/", "Terms and Conditions"],
-      ]}
+      links={$app_navigation.values}
     />
   </div>
 
@@ -39,12 +30,7 @@
     <FooterWidget
       icon={"trending_up"}
       title={"Services"}
-      links={[
-        ["/", "Lease a Website"],
-        ["/", "Search Engine Optimization"],
-        ["/", "Accessibility Compliance"],
-        ["/", "Cybersecurity Audit"],
-      ]}
+      links={$app_navigation.services}
     />
   </div>
 
@@ -89,7 +75,11 @@
     grid-area: column5;
     height: auto;
     justify-content: center;
-    margin-top: -40px;
+    margin-top: -20px;
+  }
+
+  .column5 p {
+    margin-bottom: 0;
   }
   span {
     font-size: var(--font-size-lg);

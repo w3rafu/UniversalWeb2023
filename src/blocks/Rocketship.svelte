@@ -148,6 +148,9 @@ left: 400px;
       position: inherit;
       margin: -40px 0 0;
     }
+    .columns {
+      margin: 60px 0;
+    }
   }
   
 </style>

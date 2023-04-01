@@ -11,6 +11,8 @@
    * @type {any}
    */
   export let links;
+
+  let menu = Object.entries(links)
 </script>
 
 <div class="col2">
@@ -23,9 +25,9 @@
   <hr />
   <nav>
     <ul>
-      {#each links as link}
+      {#each menu as menuitem}
         <li>
-          <a href={link[0]}>{link[1]}</a>
+          <a href={menuitem[1].path}>{menuitem[1].label}</a>
         </li>
       {/each}
     </ul>

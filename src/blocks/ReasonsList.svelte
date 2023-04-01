@@ -134,5 +134,9 @@
       margin-top: -20px;
       margin-bottom: 0;
     }
+
+    .list {
+      margin: 0;
+    }
   }
 </style>

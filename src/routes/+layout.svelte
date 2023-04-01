@@ -40,15 +40,19 @@
 </svelte:head>
 
 <!--The Content -->
-<Header />
+{#if $windowSize}
+  <Header />
   <main>
     <slot />
   </main>
-<Footer />
+  <Footer />
+
+{/if}
+
 
 <!--The stu;e-->
 <style>
-  
+
   main {
     margin: 0 30px;
   }
@@ -87,7 +91,7 @@
     padding: 15px 30px;
     margin: 0;
     font-size: var(--font-size-base);
-    background-image: url('04-1.webp');
+    background-image: url('/04-1.webp');
     background-size: cover;
     background-blend-mode: color-dodge;
     background-attachment: fixed;

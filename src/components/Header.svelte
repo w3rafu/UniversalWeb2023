@@ -40,10 +40,13 @@
 <!--The header 
   (applies dynamic class on resizing or scrolling)
 -->
+
 <header class:resized={$windowSize <= 1000} class:scrolled={$scrolled > 30}>
   <Logo />
   <Menu on:dropdown={handleDropdown} />
 </header>
+
+
 
 <!--Services Modal-->
 
@@ -53,7 +56,7 @@
     ["captive_portal", "Lease a Website"],
     ["rocket", "Search Engine Optimization"],
     ["accessible", "Accessibility Compliance"],
-    ["detection_and_zone", "Cybersecurity Audit"],
+
   ]}
 />
 
@@ -64,8 +67,8 @@
   menu_items={[
     ["groups_3", "About us"],
     ["library_books", "Articles"],
-    ["local_library", "Knowledge Base"],
     ["ecg_heart", "Ethical Statement"],
+    ["ecg_heart", "Terms & Policies"],
   ]}
 />
 
@@ -101,6 +104,7 @@
     header {
       grid-template-columns: auto auto;
       justify-content: space-between;
+      background-color: var(--darkover);
       width: 100%;
     }
     .scrolled {

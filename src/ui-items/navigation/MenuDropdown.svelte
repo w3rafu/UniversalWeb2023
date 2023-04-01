@@ -101,7 +101,7 @@
   }
   .dropdownmenu-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
 

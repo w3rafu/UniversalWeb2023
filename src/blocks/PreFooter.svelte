@@ -124,18 +124,21 @@
       height: 140px;
       margin: 10px;
     }
+    .pics {
+      margin: 0 0 30px;
+    }
   }
 
   @media (max-width: 650px) {
     div img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       margin: 10px;
     }
 
     #advertising {
       margin-top: 40px;
       margin-bottom: 60px;
-    }
+     }
   }
 </style>

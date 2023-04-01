@@ -8,8 +8,6 @@
   <p class="first">
     Universal Web recognize and value the unique strengths and perspectives that
     individuals with disabilities and diverse backgrounds have to offer.
-  </p>
-  <p>
     We are passionate about empowering others into achieving their goals an
     making techonolgy accessible for everyone.
   </p>
