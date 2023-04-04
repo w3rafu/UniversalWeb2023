@@ -12,10 +12,10 @@
     subtitle: `<span style="font-weight: 700;">For 5 dollars a day</span>, 
     <span style="font-weight: 400;">lease the website and marketing support you need to 
     establish a professional digital presence.</span>`,
-    left_button_label: "Do I Qualify?",
+    left_button_label: "Who are you?",
     right_button_label: "Lets Talk",
-    left_button_href: "",
-    right_button_href: "",
+    left_button_href: "/about-us",
+    right_button_href: "/contact-us",
     seats_counter_label: "Seats Left:",
     seats_count: 19,
   }}

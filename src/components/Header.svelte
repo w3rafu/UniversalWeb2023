@@ -98,7 +98,7 @@
 
   @media (max-width: 1001px) {
     .resized {
-      margin: 0 0 10px;
+      margin: 0 0 30px;
       width: 100%;
     }
     header {
@@ -106,6 +106,7 @@
       justify-content: space-between;
       background-color: var(--darkover);
       width: 100%;
+
     }
     .scrolled {
       padding: 20px;
@@ -118,5 +119,6 @@
       border-bottom-right-radius: 15px;
 
     }
+
   }
 </style>

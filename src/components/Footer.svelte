@@ -47,7 +47,7 @@
   footer {
     background-color: var(--darkover);
     border-radius: 20px;
-    box-shadow: var(--bottomshadow);
+    margin-bottom: 30px;
     display: grid;
     gap: 30px;
     grid-template-columns: 0.9fr 0.5fr 0.5fr 0.5fr;
@@ -99,6 +99,7 @@
         "column2 column3 column4"
         "column5 column5 column5"
       ;
+      margin: 30px;
     }
     .column1 {
       text-align: center;
@@ -126,6 +127,7 @@
       display: flex;
       align-items: center;
       padding: 30px;
+      margin: 0;
     }
     
 
