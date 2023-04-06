@@ -37,18 +37,15 @@
   };
 </script>
 
-<!--The header 
-  (applies dynamic class on resizing or scrolling)
--->
 
-<header class:resized={$windowSize <= 1000} class:scrolled={$scrolled > 30}>
+<header>
   <Logo />
-  <Menu on:dropdown={handleDropdown} />
+<!-- <Menu on:dropdown={handleDropdown} /> -->
 </header>
 
 
 
-<!--Services Modal-->
+<!--Services Modal
 
 <MenuDropdown
   menu_name={"services-modal"}
@@ -59,8 +56,8 @@
 
   ]}
 />
-
-<!--Learn Modal-->
+-->
+<!--Learn Modal
 
 <MenuDropdown
   menu_name={"learn-modal"}
@@ -71,7 +68,7 @@
     ["ecg_heart", "Terms & Policies"],
   ]}
 />
-
+-->
 <style>
   header {
     align-items: center;
@@ -79,8 +76,7 @@
     display: grid;
     grid-template-columns: 300px auto;
     padding: 20px;
-    position: sticky;
-    top: 0;
+
     z-index: 999;
   }
   .scrolled {

@@ -31,13 +31,7 @@
   </div>
 </section>
 <div class="ctas row align-center">
-  <IconButton
-    href={data.left_button_href}
-    icon={"psychology_alt"}
-    label={data.left_button_label}
-    background={"white"}
-    color={""}
-  />
+
 
   <IconButton
     href={data.right_button_href}

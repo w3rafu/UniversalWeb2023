@@ -45,7 +45,6 @@
   <main>
     <slot />
   </main>
-  <Footer />
 
 {/if}
 
