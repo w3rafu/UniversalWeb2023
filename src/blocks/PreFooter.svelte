@@ -130,15 +130,29 @@
   }
 
   @media (max-width: 650px) {
+    .pics {
+      min-width: 100%;
+      margin: 0 auto 40px;
+    }
     div img {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       margin: 10px;
     }
 
     #advertising {
+      min-width: 100%;
       margin-top: 40px;
       margin-bottom: 60px;
+
      }
+  }
+
+  @media(max-width: 360px){
+    div img {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+    }
   }
 </style>

@@ -74,7 +74,7 @@
     display: grid;
     grid-template-areas: "left-column right-column";
     grid-template-columns: 2.4fr 1.6fr;
-    margin: 60px 30px 20px;
+    margin: 60px 30px 0;
   }
 
   .left-column {

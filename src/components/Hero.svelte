@@ -26,7 +26,6 @@
     <!--Hero headings-->
     <h1>{@html data.title}</h1>
     <h2>{@html data.subtitle}</h2>
-
     <!--Seat counter-->
   </div>
 </section>
@@ -65,7 +64,7 @@
   h2 {
     font-weight: 400;
     opacity: 0.9;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
     line-height: 1.6;
   }
 
@@ -87,7 +86,7 @@
 
     25% {
       border-radius: 19% 81% 28% 72% / 76% 60% 40% 24%;
-      box-shadow: 0 0 200px white;
+      box-shadow: 0 0 200px rgb(117, 74, 204);
     }
 
     50% {
@@ -96,7 +95,7 @@
     }
     100% {
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      box-shadow: 0 0 180px rgba(193, 142, 250, 0.438);
+      box-shadow: 0 0 180px rgba(27, 224, 162, 0.438);
     }
   }
 
@@ -144,6 +143,7 @@
     #hero {
       display: flex;
       flex-direction: column;
+      padding-top: 0;
     }
 
     #hero-content {

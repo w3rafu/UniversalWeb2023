@@ -21,15 +21,20 @@
   }
 
   .logo {
-    width: clamp(3rem, 10vw, 4rem);
+    width: clamp(3.5rem, 10vw, 4rem);
     margin-right: 15px;
   }
 
   @media (max-width: 1000px) {
+    
     .brand {
       align-items: center;
       flex-direction: row;
       margin-right: 7px;
+    }
+
+    h2 {
+      font-size: var(--font-size-xl);
     }
   }
 </style>
