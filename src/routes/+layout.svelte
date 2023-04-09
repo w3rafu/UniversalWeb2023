@@ -58,7 +58,7 @@
 
   :global(:root) {
     --darkover: #0d0c18c1;
-    --blue: #060b38;
+    --blue: #050a38;
     --lightBlue: #1b6dde;
     --link: #bcede9;
     --green: #14d752;
